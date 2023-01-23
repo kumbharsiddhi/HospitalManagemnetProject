@@ -30,14 +30,14 @@ package com.Springboot.data.Controller;
 		@Autowired
 		private DoctorLoginRepository DoctorLoginRepository;
 		@CrossOrigin(origins = "http://localhost:4200")
-		@GetMapping("/DoctLogin")
+		@GetMapping("/DoctorLogin")
 		
 		
 		public List<DoctorLogin> getAllDoctorLogin(){
 			
 			
 			
-			return DoctorLoginRepository.findAll();
+			return DoctorLogRepository.findAll();
 		}
 		
 		@CrossOrigin(origins = "http://localhost:4200")
