@@ -22,26 +22,11 @@ export class DocdashComponent implements OnInit {
   }
 
   private getPatients(){
-    this.patientService.getPatientslist().subscribe(data => { this.patients = data; 
+    this.patientService.getPatientlist().subscribe(data => { this.patient = data; 
     });
   }
 
-  viewPatient(id: number) {
 
-    this.router.navigate(['viewpatient', id]);
-
-  }
-  updatePatient(id: number) {
-
-    this.router.navigate(['updatepatient', id]);
-
-  }
-
-  deletePatient(id: number) {
-    this.patientService.deletePatient(id).subscribe(data => {
-      console.log(data);
-      this.getPatients();
-    } ); 
   }
 
 }
